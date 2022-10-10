@@ -53,7 +53,7 @@ public class GroupMemmbersController {
     }
 
     @DeleteMapping(path="{id}")
-        ResponseEntity deleteBook(@PathVariable("id") Long id){
+        ResponseEntity delete(@PathVariable("id") Long id){
         log.info(" About to delete member with id :  {}",id);
         GroupMembers deletedMember=groupMemberService.delete(id);
         return new ResponseEntity(deletedMember,HttpStatus.OK);
